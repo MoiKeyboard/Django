@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig', #blog app config
     'users.apps.UsersConfig', #user app config
+    'crispy_forms', # Django-Crispy forms
 ]
 
 MIDDLEWARE = [
@@ -108,3 +109,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Crispy forms defaults to bootstrap2, use bootstrap4
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Redirect default login auth_view to home instead of profile   
+LOGIN_REDIRECT_URL = 'blog-home'
+
+# Set default login URL to user_view (login)
+LOGIN_URL = 'login'
