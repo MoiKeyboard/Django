@@ -118,3 +118,7 @@ LOGIN_REDIRECT_URL = 'blog-home'
 
 # Set default login URL to user_view (login)
 LOGIN_URL = 'login'
+
+# Directory for pictures (file stored on /media not in DB)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
