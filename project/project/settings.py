@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig', #blog app config
     'users.apps.UsersConfig', #user app config
     'crispy_forms', # Django-Crispy forms
+    'django_cleanup'# Django-cleanup (cleaning up overwritten)
 ]
 
 MIDDLEWARE = [
