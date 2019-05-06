@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import ListView
 from .models import Post
 # from django.http import HttpResponse 
 
@@ -23,7 +24,13 @@ def home(request):
         'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context) # render returns http
-    
+
+# Class based views
+class PostListView(ListView):
+    model = Post
+    template_name = 'blog/home.html' # <app>/<moddel>_<viewtype>.html
+    context_object_name = 'posts'
+
 def about(request): 
     return render(request, 'blog/about.html', {'title' : 'About'}) # render returns http
 
